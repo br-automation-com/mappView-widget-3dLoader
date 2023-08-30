@@ -1,0 +1,6 @@
+/**
+ * @license
+ * Copyright 2010-2022 Three.js Authors
+ * SPDX-License-Identifier: MIT
+ */
+define(["exports","../_virtual/_rollupPluginBabelHelpers","../core/BufferGeometry","../core/BufferAttribute"],(function(e,t,r,o){"use strict";var i=function(e){function r(t,r,i,u){var n;void 0===t&&(t=1),void 0===r&&(r=1),void 0===i&&(i=1),void 0===u&&(u=1),(n=e.call(this)||this).type="PlaneGeometry",n.parameters={width:t,height:r,widthSegments:i,heightSegments:u};for(var f=t/2,s=r/2,a=Math.floor(i),h=Math.floor(u),l=a+1,v=h+1,p=t/a,d=r/h,m=[],b=[],c=[],g=[],w=0;w<v;w++)for(var B=w*d-s,y=0;y<l;y++){var A=y*p-f;b.push(A,-B,0),c.push(0,0,1),g.push(y/a),g.push(1-w/h)}for(var G=0;G<h;G++)for(var P=0;P<a;P++){var S=P+l*G,_=P+l*(G+1),F=P+1+l*(G+1),M=P+1+l*G;m.push(S,_,M),m.push(_,F,M)}return n.setIndex(m),n.setAttribute("position",new o.Float32BufferAttribute(b,3)),n.setAttribute("normal",new o.Float32BufferAttribute(c,3)),n.setAttribute("uv",new o.Float32BufferAttribute(g,2)),n}return t.inheritsLoose(r,e),r.fromJSON=function(e){return new r(e.width,e.height,e.widthSegments,e.heightSegments)},r}(r.BufferGeometry);e.PlaneBufferGeometry=i,e.PlaneGeometry=i,Object.defineProperty(e,"__esModule",{value:!0})}));

@@ -1,0 +1,6 @@
+/**
+ * @license
+ * Copyright 2010-2022 Three.js Authors
+ * SPDX-License-Identifier: MIT
+ */
+define(["exports"],(function(e){"use strict";var r=function(){function e(e){void 0===e&&(e=4),this.pool=e,this.queue=[],this.workers=[],this.workersResolve=[],this.workerStatus=0}var r=e.prototype;return r._initWorker=function(e){if(!this.workers[e]){var r=this.workerCreator();r.addEventListener("message",this._onMessage.bind(this,e)),this.workers[e]=r}},r._getIdleWorker=function(){for(var e=0;e<this.pool;e++)if(!(this.workerStatus&1<<e))return e;return-1},r._onMessage=function(e,r){var t=this.workersResolve[e];if(t&&t(r),this.queue.length){var s=this.queue.shift(),o=s.resolve,i=s.msg,n=s.transfer;this.workersResolve[e]=o,this.workers[e].postMessage(i,n)}else this.workerStatus^=1<<e},r.setWorkerCreator=function(e){this.workerCreator=e},r.setWorkerLimit=function(e){this.pool=e},r.postMessage=function(e,r){var t=this;return new Promise((function(s){var o=t._getIdleWorker();-1!==o?(t._initWorker(o),t.workerStatus|=1<<o,t.workersResolve[o]=s,t.workers[o].postMessage(e,r)):t.queue.push({resolve:s,msg:e,transfer:r})}))},r.dispose=function(){this.workers.forEach((function(e){return e.terminate()})),this.workersResolve.length=0,this.workers.length=0,this.queue.length=0,this.workerStatus=0},e}();e.WorkerPool=r,Object.defineProperty(e,"__esModule",{value:!0})}));

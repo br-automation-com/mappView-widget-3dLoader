@@ -1,0 +1,6 @@
+/**
+ * @license
+ * Copyright 2010-2022 Three.js Authors
+ * SPDX-License-Identifier: MIT
+ */
+define(["exports","../_virtual/_rollupPluginBabelHelpers","../animation/AnimationClip","../core/BufferAttribute","./FileLoader","./Loader","../animation/tracks/NumberKeyframeTrack"],(function(e,r,t,a,n,o,i){"use strict";var l=function(e){function o(r){return e.call(this,r)||this}r.inheritsLoose(o,e);var l=o.prototype;return l.load=function(e,r,t,a){var o=this,i=new n.FileLoader(this.manager);i.setPath(this.path),i.setResponseType("arraybuffer"),i.load(e,(function(e){r(o.parse(e))}),t,a)},l.parse=function(e){for(var r=new DataView(e),n=r.getUint32(0),o=r.getUint32(4),l=8,u=new Float32Array(n),f=new Float32Array(n*n).fill(0),s=0;s<n;s++)u[s]=r.getFloat32(l),l+=4,f[n*s+s]=1;for(var p=new i.NumberKeyframeTrack(".morphTargetInfluences",u,f),c=new t.AnimationClip("default",u[u.length-1],[p]),h=[],m=0;m<n;m++){for(var d=new Float32Array(3*o),g=0;g<o;g++){var v=3*g;d[v+0]=r.getFloat32(l),l+=4,d[v+1]=r.getFloat32(l),l+=4,d[v+2]=r.getFloat32(l),l+=4}var w=new a.BufferAttribute(d,3);w.name="morph_"+m,h.push(w)}return{morphTargets:h,clip:c}},o}(o.Loader);e.MDDLoader=l,Object.defineProperty(e,"__esModule",{value:!0})}));

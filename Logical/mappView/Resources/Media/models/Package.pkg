@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio FileVersion="4.9"?>
+<Package xmlns="http://br-automation.co.at/AS/Package">
+  <Objects>
+    <Object Type="Package">3dm</Object>
+    <Object Type="Package">3ds</Object>
+    <Object Type="Package">3mf</Object>
+    <Object Type="Package">amf</Object>
+    <Object Type="Package">bvh</Object>
+    <Object Type="Package">collada</Object>
+    <!-- <Object Type="Package">draco</Object> -->
+    <!-- <Object Type="Package">fbx</Object> -->
+    <!-- <Object Type="Package">gcode</Object> -->
+    <!-- <Object Type="Package">gltf</Object> -->
+    <!-- <Object Type="Package">ifc</Object> -->
+    <!-- <Object Type="Package">json</Object> --> 
+    <!-- <Object Type="Package">kmz</Object> -->
+    <!-- <Object Type="Package">ldraw</Object> -->
+    <!-- <Object Type="Package">lwo</Object> -->
+    <!-- <Object Type="Package">md2</Object> -->
+    <!-- <Object Type="Package">mdd</Object> -->
+    <!-- <Object Type="Package">mmd</Object> -->
+    <!-- <Object Type="Package">nrrd</Object> -->
+    <!-- <Object Type="Package">obj</Object> -->
+    <!-- <Object Type="Package">pcd</Object> -->
+    <!-- <Object Type="Package">pcb</Object> -->
+    <!-- <Object Type="Package">ply</Object> -->
+    <!-- <Object Type="Package">prwm</Object> -->
+    <!-- <Object Type="Package">stl</Object> -->
+    <!-- <Object Type="Package">svg</Object> -->
+    <!-- <Object Type="Package">tilt</Object> -->
+    <!-- <Object Type="Package">vox</Object> -->
+    <!-- <Object Type="Package">vrml</Object> -->
+    <!-- <Object Type="Package">vtk</Object> -->
+    <!-- <Object Type="Package">xyz</Object> -->
+  </Objects>
+</Package>

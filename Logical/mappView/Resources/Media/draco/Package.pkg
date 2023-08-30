@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio FileVersion="4.9"?>
+<Package xmlns="http://br-automation.co.at/AS/Package">
+  <Objects>
+    <Object Type="File">draco_decoder.js</Object>
+    <Object Type="File">draco_encoder.js</Object>
+    <Object Type="File">draco_decoder.wasm</Object>
+    <Object Type="File">draco_wasm_wrapper.js</Object>
+    <Object Type="Package">gltf</Object>
+  </Objects>
+</Package>

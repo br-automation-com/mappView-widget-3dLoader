@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio FileVersion="4.9"?>
+<Package xmlns="http://br-automation.co.at/AS/Package">
+  <Objects>
+    <Object Type="File">Body_tex_003.jpg</Object>
+    <Object Type="File">ce.jpg</Object>
+    <Object Type="File">elf.dae</Object>
+    <Object Type="File">Face_tex_002_toObj.jpg</Object>
+    <Object Type="File">Hair_tex_001.jpg</Object>
+  <Objects/>
+</Package>

@@ -1,0 +1,6 @@
+/**
+ * @license
+ * Copyright 2010-2022 Three.js Authors
+ * SPDX-License-Identifier: MIT
+ */
+define(["exports","../../_virtual/_rollupPluginBabelHelpers","../core/Curve","../core/Interpolations","../../math/Vector2"],(function(t,o,r,n,e){"use strict";var i=function(t){function r(o){var r;return void 0===o&&(o=[]),(r=t.call(this)||this).isSplineCurve=!0,r.type="SplineCurve",r.points=o,r}o.inheritsLoose(r,t);var i=r.prototype;return i.getPoint=function(t,o){void 0===o&&(o=new e.Vector2);var r=o,i=this.points,s=(i.length-1)*t,p=Math.floor(s),l=s-p,u=i[0===p?p:p-1],h=i[p],a=i[p>i.length-2?i.length-1:p+1],c=i[p>i.length-3?i.length-1:p+2];return r.set(n.CatmullRom(l,u.x,h.x,a.x,c.x),n.CatmullRom(l,u.y,h.y,a.y,c.y)),r},i.copy=function(o){t.prototype.copy.call(this,o),this.points=[];for(var r=0,n=o.points.length;r<n;r++){var e=o.points[r];this.points.push(e.clone())}return this},i.toJSON=function(){var o=t.prototype.toJSON.call(this);o.points=[];for(var r=0,n=this.points.length;r<n;r++){var e=this.points[r];o.points.push(e.toArray())}return o},i.fromJSON=function(o){t.prototype.fromJSON.call(this,o),this.points=[];for(var r=0,n=o.points.length;r<n;r++){var i=o.points[r];this.points.push((new e.Vector2).fromArray(i))}return this},r}(r.Curve);t.SplineCurve=i,Object.defineProperty(t,"__esModule",{value:!0})}));

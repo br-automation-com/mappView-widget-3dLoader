@@ -1,0 +1,6 @@
+/**
+ * @license
+ * Copyright 2010-2022 Three.js Authors
+ * SPDX-License-Identifier: MIT
+ */
+define(["exports","../_virtual/_rollupPluginBabelHelpers","../core/BufferGeometry","../core/BufferAttribute","../math/Vector3","../math/Vector2"],(function(t,e,r,u,o,i){"use strict";var a=function(t){function r(e,r,a,s){var n;void 0===e&&(e=1),void 0===r&&(r=8),void 0===a&&(a=0),void 0===s&&(s=2*Math.PI),(n=t.call(this)||this).type="CircleGeometry",n.parameters={radius:e,segments:r,thetaStart:a,thetaLength:s},r=Math.max(3,r);var f=[],h=[],c=[],l=[],p=new o.Vector3,m=new i.Vector2;h.push(0,0,0),c.push(0,0,1),l.push(.5,.5);for(var v=0,y=3;v<=r;v++,y+=3){var d=a+v/r*s;p.x=e*Math.cos(d),p.y=e*Math.sin(d),h.push(p.x,p.y,p.z),c.push(0,0,1),m.x=(h[y]/e+1)/2,m.y=(h[y+1]/e+1)/2,l.push(m.x,m.y)}for(var b=1;b<=r;b++)f.push(b,b+1,0);return n.setIndex(f),n.setAttribute("position",new u.Float32BufferAttribute(h,3)),n.setAttribute("normal",new u.Float32BufferAttribute(c,3)),n.setAttribute("uv",new u.Float32BufferAttribute(l,2)),n}return e.inheritsLoose(r,t),r.fromJSON=function(t){return new r(t.radius,t.segments,t.thetaStart,t.thetaLength)},r}(r.BufferGeometry);t.CircleBufferGeometry=a,t.CircleGeometry=a,Object.defineProperty(t,"__esModule",{value:!0})}));

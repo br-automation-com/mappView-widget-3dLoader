@@ -1,0 +1,6 @@
+/**
+ * @license
+ * Copyright 2010-2022 Three.js Authors
+ * SPDX-License-Identifier: MIT
+ */
+define(["exports","../../_virtual/_rollupPluginBabelHelpers"],(function(e,t){"use strict";var a=0,r=function(){function e(){this.shaderCache=new Map,this.materialCache=new Map}var a=e.prototype;return a.update=function(e){var t=e.vertexShader,a=e.fragmentShader,r=this._getShaderStage(t),h=this._getShaderStage(a),i=this._getShaderCacheForMaterial(e);return!1===i.has(r)&&(i.add(r),r.usedTimes++),!1===i.has(h)&&(i.add(h),h.usedTimes++),this},a.remove=function(e){for(var a,r=this.materialCache.get(e),h=t.createForOfIteratorHelperLoose(r);!(a=h()).done;){var i=a.value;i.usedTimes--,0===i.usedTimes&&this.shaderCache.delete(i.code)}return this.materialCache.delete(e),this},a.getVertexShaderID=function(e){return this._getShaderStage(e.vertexShader).id},a.getFragmentShaderID=function(e){return this._getShaderStage(e.fragmentShader).id},a.dispose=function(){this.shaderCache.clear(),this.materialCache.clear()},a._getShaderCacheForMaterial=function(e){var t=this.materialCache;return!1===t.has(e)&&t.set(e,new Set),t.get(e)},a._getShaderStage=function(e){var t=this.shaderCache;if(!1===t.has(e)){var a=new h(e);t.set(e,a)}return t.get(e)},e}(),h=function(e){this.id=a++,this.code=e,this.usedTimes=0};e.WebGLShaderCache=r,Object.defineProperty(e,"__esModule",{value:!0})}));

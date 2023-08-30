@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio FileVersion="4.9"?>
+<Package xmlns="http://br-automation.co.at/AS/Package">
+  <Objects>
+    <Object Type="Package">elf</Object>
+    <Object Type="Package">pump</Object>
+    <Object Type="Package">stormtrooper</Object>
+    <Object Type="File">abb_irb52_7_120.dae</Object>
+    <Object Type="File">kawada-hironx.dae</Object>
+    <Object Type="File">skin_and_morph.dae</Object>
+  <Objects/>
+</Package>

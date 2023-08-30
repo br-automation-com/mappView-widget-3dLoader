@@ -1,0 +1,6 @@
+/**
+ * @license
+ * Copyright 2010-2022 Three.js Authors
+ * SPDX-License-Identifier: MIT
+ */
+define(["exports","../../constants","../../extras/PMREMGenerator"],(function(e,r,t){"use strict";e.WebGLCubeUVMaps=function(e){var n=new WeakMap,a=null;function i(e){var r=e.target;r.removeEventListener("dispose",i);var t=n.get(r);void 0!==t&&(n.delete(r),t.dispose())}return{get:function(u){if(u&&u.isTexture){var o=u.mapping,s=o===r.EquirectangularReflectionMapping||o===r.EquirectangularRefractionMapping,p=o===r.CubeReflectionMapping||o===r.CubeRefractionMapping;if(s||p){if(u.isRenderTargetTexture&&!0===u.needsPMREMUpdate){u.needsPMREMUpdate=!1;var f=n.get(u);return null===a&&(a=new t.PMREMGenerator(e)),f=s?a.fromEquirectangular(u,f):a.fromCubemap(u,f),n.set(u,f),f.texture}if(n.has(u))return n.get(u).texture;var l=u.image;if(s&&l&&l.height>0||p&&l&&function(e){for(var r=0,t=6,n=0;n<t;n++)void 0!==e[n]&&r++;return r===t}(l)){null===a&&(a=new t.PMREMGenerator(e));var d=s?a.fromEquirectangular(u):a.fromCubemap(u);return n.set(u,d),u.addEventListener("dispose",i),d.texture}return null}}return u},dispose:function(){n=new WeakMap,null!==a&&(a.dispose(),a=null)}}},Object.defineProperty(e,"__esModule",{value:!0})}));

@@ -1,0 +1,6 @@
+/**
+ * @license
+ * Copyright 2010-2022 Three.js Authors
+ * SPDX-License-Identifier: MIT
+ */
+define(["exports","../_virtual/_rollupPluginBabelHelpers","../extras/ImageUtils","../math/MathUtils"],(function(e,t,i,a){"use strict";var n=function(){function e(e){void 0===e&&(e=null),this.isSource=!0,this.uuid=a.generateUUID(),this.data=e,this.version=0}return e.prototype.toJSON=function(e){var t=void 0===e||"string"==typeof e;if(!t&&void 0!==e.images[this.uuid])return e.images[this.uuid];var i={uuid:this.uuid,url:""},a=this.data;if(null!==a){var n;if(Array.isArray(a)){n=[];for(var s=0,u=a.length;s<u;s++)a[s].isDataTexture?n.push(r(a[s].image)):n.push(r(a[s]))}else n=r(a);i.url=n}return t||(e.images[this.uuid]=i),i},t.createClass(e,[{key:"needsUpdate",set:function(e){!0===e&&this.version++}}]),e}();function r(e){return"undefined"!=typeof HTMLImageElement&&e instanceof HTMLImageElement||"undefined"!=typeof HTMLCanvasElement&&e instanceof HTMLCanvasElement||"undefined"!=typeof ImageBitmap&&e instanceof ImageBitmap?i.ImageUtils.getDataURL(e):e.data?{data:Array.from(e.data),width:e.width,height:e.height,type:e.data.constructor.name}:(console.warn("THREE.Texture: Unable to serialize Texture."),{})}e.Source=n,Object.defineProperty(e,"__esModule",{value:!0})}));

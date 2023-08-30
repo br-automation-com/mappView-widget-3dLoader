@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio FileVersion="4.9"?>
+<Package SubType="MediaPackage" PackageType="MediaPackage" xmlns="http://br-automation.co.at/AS/Package">
+  <Objects>
+    <Object Type="File">crate.gif</Object>
+    <Object Type="File">Door.gltf</Object>
+    <Object Type="File">DamagedHelmet.gltf</Object>
+    <Object Type="File">Default_albedo.jpg</Object>
+    <Object Type="File">Default_AO.jpg</Object>
+    <Object Type="File">Default_emissive.jpg</Object>
+    <Object Type="File">Default_metalRoughness.jpg</Object>
+    <Object Type="File">Default_normal.jpg</Object>
+    <Object Type="File">DamagedHelmet.bin</Object>
+    <Object Type="File">royal_esplanade_1k.hdr</Object>
+    <Object Type="Package">models</Object>
+    <Object Type="Package">rhino3dm</Object>
+    <Object Type="Package">draco</Object>
+    <Object Type="Package">ifc</Object>
+  </Objects>
+</Package>

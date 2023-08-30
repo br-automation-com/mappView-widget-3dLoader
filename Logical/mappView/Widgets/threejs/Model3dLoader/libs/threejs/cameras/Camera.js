@@ -1,0 +1,6 @@
+/**
+ * @license
+ * Copyright 2010-2022 Three.js Authors
+ * SPDX-License-Identifier: MIT
+ */
+define(["exports","../_virtual/_rollupPluginBabelHelpers","../math/Matrix4","../core/Object3D"],(function(t,r,e,i){"use strict";var o=function(t){function i(){var r;return(r=t.call(this)||this).isCamera=!0,r.type="Camera",r.matrixWorldInverse=new e.Matrix4,r.projectionMatrix=new e.Matrix4,r.projectionMatrixInverse=new e.Matrix4,r}r.inheritsLoose(i,t);var o=i.prototype;return o.copy=function(r,e){return t.prototype.copy.call(this,r,e),this.matrixWorldInverse.copy(r.matrixWorldInverse),this.projectionMatrix.copy(r.projectionMatrix),this.projectionMatrixInverse.copy(r.projectionMatrixInverse),this},o.getWorldDirection=function(t){this.updateWorldMatrix(!0,!1);var r=this.matrixWorld.elements;return t.set(-r[8],-r[9],-r[10]).normalize()},o.updateMatrixWorld=function(r){t.prototype.updateMatrixWorld.call(this,r),this.matrixWorldInverse.copy(this.matrixWorld).invert()},o.updateWorldMatrix=function(r,e){t.prototype.updateWorldMatrix.call(this,r,e),this.matrixWorldInverse.copy(this.matrixWorld).invert()},o.clone=function(){return(new this.constructor).copy(this)},i}(i.Object3D);t.Camera=o,Object.defineProperty(t,"__esModule",{value:!0})}));

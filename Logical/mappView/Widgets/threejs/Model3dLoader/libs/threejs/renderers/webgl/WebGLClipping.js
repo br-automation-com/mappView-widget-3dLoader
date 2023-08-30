@@ -1,0 +1,6 @@
+/**
+ * @license
+ * Copyright 2010-2022 Three.js Authors
+ * SPDX-License-Identifier: MIT
+ */
+define(["exports","../../math/Matrix3","../../math/Plane"],(function(n,e,t){"use strict";n.WebGLClipping=function(n){var l=this,i=null,a=0,u=!1,r=!1,s=new t.Plane,o=new e.Matrix3,c={value:null,needsUpdate:!1};function h(){c.value!==i&&(c.value=i,c.needsUpdate=a>0),l.numPlanes=a,l.numIntersection=0}function p(n,e,t,i){var a=null!==n?n.length:0,u=null;if(0!==a){if(u=c.value,!0!==i||null===u){var r=t+4*a,h=e.matrixWorldInverse;o.getNormalMatrix(h),(null===u||u.length<r)&&(u=new Float32Array(r));for(var p=0,f=t;p!==a;++p,f+=4)s.copy(n[p]).applyMatrix4(h,o),s.normal.toArray(u,f),u[f+3]=s.constant}c.value=u,c.needsUpdate=!0}return l.numPlanes=a,l.numIntersection=0,u}this.uniform=c,this.numPlanes=0,this.numIntersection=0,this.init=function(n,e,t){var l=0!==n.length||e||0!==a||u;return u=e,i=p(n,t,0),a=n.length,l},this.beginShadows=function(){r=!0,p(null)},this.endShadows=function(){r=!1,h()},this.setState=function(e,t,l){var s=e.clippingPlanes,o=e.clipIntersection,f=e.clipShadows,v=n.get(e);if(!u||null===s||0===s.length||r&&!f)r?p(null):h();else{var m=r?0:a,d=4*m,g=v.clippingState||null;c.value=g,g=p(s,t,d,l);for(var P=0;P!==d;++P)g[P]=i[P];v.clippingState=g,this.numIntersection=o?this.numPlanes:0,this.numPlanes+=m}}},Object.defineProperty(n,"__esModule",{value:!0})}));

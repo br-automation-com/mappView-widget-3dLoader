@@ -1,0 +1,6 @@
+/**
+ * @license
+ * Copyright 2010-2022 Three.js Authors
+ * SPDX-License-Identifier: MIT
+ */
+define(["exports","../_virtual/_rollupPluginBabelHelpers","../core/BufferGeometry","./FileLoader","../core/BufferAttribute","./Loader"],(function(e,t,r,a,o,s){"use strict";var i=function(e){function s(){return e.apply(this,arguments)||this}t.inheritsLoose(s,e);var i=s.prototype;return i.load=function(e,t,r,o){var s=this,i=new a.FileLoader(this.manager);i.setPath(this.path),i.setRequestHeader(this.requestHeader),i.setWithCredentials(this.withCredentials),i.load(e,(function(r){try{t(s.parse(r))}catch(t){o?o(t):console.error(t),s.manager.itemError(e)}}),r,o)},i.parse=function(e){for(var a,s=e.split("\n"),i=[],u=[],l=t.createForOfIteratorHelperLoose(s);!(a=l()).done;){var n=a.value;if("#"!==(n=n.trim()).charAt(0)){var p=n.split(/\s+/);3===p.length&&(i.push(parseFloat(p[0])),i.push(parseFloat(p[1])),i.push(parseFloat(p[2]))),6===p.length&&(i.push(parseFloat(p[0])),i.push(parseFloat(p[1])),i.push(parseFloat(p[2])),u.push(parseFloat(p[3])/255),u.push(parseFloat(p[4])/255),u.push(parseFloat(p[5])/255))}}var h=new r.BufferGeometry;return h.setAttribute("position",new o.Float32BufferAttribute(i,3)),u.length>0&&h.setAttribute("color",new o.Float32BufferAttribute(u,3)),h},s}(s.Loader);e.XYZLoader=i,Object.defineProperty(e,"__esModule",{value:!0})}));

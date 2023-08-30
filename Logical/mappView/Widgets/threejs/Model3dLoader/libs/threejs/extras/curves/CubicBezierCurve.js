@@ -1,0 +1,6 @@
+/**
+ * @license
+ * Copyright 2010-2022 Three.js Authors
+ * SPDX-License-Identifier: MIT
+ */
+define(["exports","../../_virtual/_rollupPluginBabelHelpers","../core/Curve","../core/Interpolations","../../math/Vector2"],(function(r,t,e,i,o){"use strict";var v=function(r){function e(t,e,i,v){var s;return void 0===t&&(t=new o.Vector2),void 0===e&&(e=new o.Vector2),void 0===i&&(i=new o.Vector2),void 0===v&&(v=new o.Vector2),(s=r.call(this)||this).isCubicBezierCurve=!0,s.type="CubicBezierCurve",s.v0=t,s.v1=e,s.v2=i,s.v3=v,s}t.inheritsLoose(e,r);var v=e.prototype;return v.getPoint=function(r,t){void 0===t&&(t=new o.Vector2);var e=t,v=this.v0,s=this.v1,c=this.v2,n=this.v3;return e.set(i.CubicBezier(r,v.x,s.x,c.x,n.x),i.CubicBezier(r,v.y,s.y,c.y,n.y)),e},v.copy=function(t){return r.prototype.copy.call(this,t),this.v0.copy(t.v0),this.v1.copy(t.v1),this.v2.copy(t.v2),this.v3.copy(t.v3),this},v.toJSON=function(){var t=r.prototype.toJSON.call(this);return t.v0=this.v0.toArray(),t.v1=this.v1.toArray(),t.v2=this.v2.toArray(),t.v3=this.v3.toArray(),t},v.fromJSON=function(t){return r.prototype.fromJSON.call(this,t),this.v0.fromArray(t.v0),this.v1.fromArray(t.v1),this.v2.fromArray(t.v2),this.v3.fromArray(t.v3),this},e}(e.Curve);r.CubicBezierCurve=v,Object.defineProperty(r,"__esModule",{value:!0})}));
