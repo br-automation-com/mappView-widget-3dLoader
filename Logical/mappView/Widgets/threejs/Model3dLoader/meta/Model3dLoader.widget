@@ -22,7 +22,7 @@
 		<Descriptions>
 			<Description name="short">Grafikobjekt</Description>
 			<Description name="de">Zeichnet ein Quadrat oder Rechteck</Description>
-			<Description name="en">Unista Model3dLoader</Description>
+			<Description name="en"> Model3dLoader</Description>
 		</Descriptions>
 		<Inheritance>
 			<Class level="0">widgets.brease.Model3dLoader</Class>

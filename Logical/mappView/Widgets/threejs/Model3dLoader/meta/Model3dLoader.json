@@ -644,7 +644,7 @@
     "descriptions": {
         "short": "Grafikobjekt",
         "de": "Zeichnet ein Quadrat oder Rechteck",
-        "en": "Unista Model3dLoader"
+        "en": " Model3dLoader"
     },
     "superproperties": {
         "id": {

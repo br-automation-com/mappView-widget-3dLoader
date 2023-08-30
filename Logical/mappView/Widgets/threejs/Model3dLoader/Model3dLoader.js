@@ -25,7 +25,7 @@ define(['brease/core/BaseWidget',
      * @iatMeta description:de
      * Zeichnet ein Quadrat oder Rechteck
      * @iatMeta description:en
-     * Unista Model3dLoader
+     *  Model3dLoader
      */
 
     /**
