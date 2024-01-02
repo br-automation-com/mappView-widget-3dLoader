@@ -5,5 +5,7 @@
   <Mapping parameter="widgets.threejs.Model3dLoader.Action.SetStyle.value" type="ANY_STRING"/>
   <Mapping parameter="widgets.threejs.Model3dLoader.Action.SetVisible.value" type="BOOL"/>
 
-  
+  <Mapping parameter="widgets.threejs.SceneLoader.Action.SetEnable.value" type="BOOL"/>
+  <Mapping parameter="widgets.threejs.SceneLoader.Action.SetStyle.value" type="ANY_STRING"/>
+  <Mapping parameter="widgets.threejs.SceneLoader.Action.SetVisible.value" type="BOOL"/>
 </Mappings>
