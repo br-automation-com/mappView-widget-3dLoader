@@ -96,6 +96,7 @@ define(['brease/core/BaseWidget',
     // override method called in BaseWidget.init
     p._initEditor = function () {
         var widget = this;
+        widget.el.addClass('iatd-outline'); //gray outline only visible in content editor
         require(['widgets/threejs/Model3dLoader/libs/EditorHandles', 'brease/events/BreaseEvent'], function (EditorHandles, BreaseEvent) {
             var editorHandles = new EditorHandles(widget);
             widget.getHandles = function () {
