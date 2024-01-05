@@ -75,18 +75,28 @@ define(['brease/core/BaseWidget',
 
         this.el.addClass('Model3dLoader');
         
+        canvasElm = document.createElement('canvas');
+        canvasElm.id = this.elem.id + '_canvas';
+        canvasElm.width = '100%';
+        canvasElm.height = '100%';
+        canvasElm.style.position = 'absolute';
+        while (this.elem.firstChild && this.elem.removeChild(this.elem.firstChild));
+        this.elem.appendChild(canvasElm);
+
         p.initThreejs();
+
+        p.onWindowResize();
+        window.addEventListener('resize', p.onWindowResize);
         p.animate();
         
         
-
-
         SuperClass.prototype.init.apply(this, arguments);
     };
 
     // override method called in BaseWidget.init
     p._initEditor = function () {
         var widget = this;
+        widget.el.addClass('iatd-outline'); //gray outline only visible in content editor
         require(['widgets/threejs/Model3dLoader/libs/EditorHandles', 'brease/events/BreaseEvent'], function (EditorHandles, BreaseEvent) {
             var editorHandles = new EditorHandles(widget);
             widget.getHandles = function () {
@@ -104,8 +114,6 @@ define(['brease/core/BaseWidget',
 
         
         THREE.Cache.enabled = true;
-
-        canvasElm = document.getElementById('threejsContainer');
 
         clientWidth = canvasElm.clientWidth;
         clientHeight = canvasElm.clientHeight;
@@ -989,7 +997,6 @@ define(['brease/core/BaseWidget',
 	};
 
     p.onWindowResize = function () {
-        canvasElm = document.getElementById('threejsContainer');
         canvasElm.style.width = "100%";
         canvasElm.style.height = "100%";
 
