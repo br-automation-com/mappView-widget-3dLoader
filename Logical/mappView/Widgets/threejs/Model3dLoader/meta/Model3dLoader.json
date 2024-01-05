@@ -8,14 +8,9 @@
             "widgets.brease.common.DragDropProperties.libs.DraggablePropertiesEvents",
             "widgets.brease.common.DragDropProperties.libs.DroppablePropertiesEvents"
         ],
-        "parents": [
-            "*"
-        ],
+        "parents": ["*"],
         "children": [],
-        "inheritance": [
-            "widgets.threejs.Model3dLoader",
-            "brease.core.BaseWidget"
-        ],
+        "inheritance": ["widgets.threejs.Model3dLoader", "brease.core.BaseWidget"],
         "filePath": "widgets/threejs/Model3dLoader/Model3dLoader.js"
     },
     "methods": [
@@ -632,14 +627,10 @@
             "widgets/brease/common/DragDropProperties/libs/DraggablePropertiesEvents.js",
             "widgets/brease/common/DragDropProperties/libs/DroppablePropertiesEvents.js"
         ],
-        "widgets": [
-            "widgets/threejs/Model3dLoader/Model3dLoader.js"
-        ]
+        "widgets": ["widgets/threejs/Model3dLoader/Model3dLoader.js"]
     },
     "categories": {
-        "Category": [
-            "Drawing"
-        ]
+        "Category": ["Drawing"]
     },
     "descriptions": {
         "short": "Grafikobjekt",
@@ -691,6 +682,74 @@
         "StyleProperty": [
             {
                 "$": {
+                    "name": "width",
+                    "type": "Size",
+                    "not_styleable": "true",
+                    "owner": "widgets.brease.Rectangle",
+                    "category": "Layout",
+                    "groupRefId": "Size",
+                    "groupOrder": "1",
+                    "default": "100"
+                },
+                "StyleElement": [{ "$": { "attribute": "@include elemWidth($value)" } }],
+                "Description": ["outer width of widget"]
+            },
+            {
+                "$": {
+                    "name": "height",
+                    "type": "Size",
+                    "not_styleable": "true",
+                    "owner": "widgets.brease.Rectangle",
+                    "category": "Layout",
+                    "groupRefId": "Size",
+                    "groupOrder": "2",
+                    "default": "100"
+                },
+                "StyleElement": [{ "$": { "attribute": "@include elemHeight($value)" } }],
+                "Description": ["outer height of widget"]
+            },
+            {
+                "$": {
+                    "name": "top",
+                    "type": "Integer",
+                    "not_styleable": "true",
+                    "owner": "brease.core.BaseWidget",
+                    "category": "Layout",
+                    "groupRefId": "Position",
+                    "groupOrder": "1"
+                },
+                "StyleElement": [{ "$": { "attribute": "@include elemTop($value)" } }],
+                "Description": ["absolute position measured from top boundary of parent container"]
+            },
+            {
+                "$": {
+                    "name": "left",
+                    "type": "Integer",
+                    "not_styleable": "true",
+                    "owner": "brease.core.BaseWidget",
+                    "category": "Layout",
+                    "groupRefId": "Position",
+                    "groupOrder": "2"
+                },
+                "StyleElement": [{ "$": { "attribute": "@include elemLeft($value)" } }],
+                "Description": ["absolute position measured from left boundary of parent container"]
+            },
+            {
+                "$": {
+                    "name": "zIndex",
+                    "type": "UInteger",
+                    "not_styleable": "true",
+                    "owner": "brease.core.BaseWidget",
+                    "category": "Layout",
+                    "required": "true"
+                },
+                "StyleElement": [{ "$": { "attribute": "z-index" } }],
+                "Description": [
+                    "The zIndex property specifies the z-order of a widget and its childs.<br/>\r\n        When widgets overlap, z-order determines which one covers the other. A widget with a larger zIndex generally covers a widget with a lower one.<br/>\r\n        The zIndex must be unique within a content.<br/>"
+                ]
+            },
+            {
+                "$": {
                     "name": "borderStyle",
                     "category": "Appearance",
                     "type": "BorderStyle",
@@ -703,9 +762,7 @@
                         }
                     }
                 ],
-                "Description": [
-                    "Sets the style of the border of the widget"
-                ]
+                "Description": ["Sets the style of the border of the widget"]
             },
             {
                 "$": {
@@ -721,9 +778,7 @@
                         }
                     }
                 ],
-                "Description": [
-                    "Sets the width of the border. For further information, please check its type"
-                ]
+                "Description": ["Sets the width of the border. For further information, please check its type"]
             },
             {
                 "$": {
@@ -757,9 +812,7 @@
                         }
                     }
                 ],
-                "Description": [
-                    "Sets the border color. For further information, please check its type"
-                ]
+                "Description": ["Sets the border color. For further information, please check its type"]
             },
             {
                 "$": {
@@ -775,9 +828,7 @@
                         }
                     }
                 ],
-                "Description": [
-                    "Sets the background color"
-                ]
+                "Description": ["Sets the background color"]
             },
             {
                 "$": {
@@ -793,9 +844,7 @@
                         }
                     }
                 ],
-                "Description": [
-                    "Sets the opacity of the widget"
-                ]
+                "Description": ["Sets the opacity of the widget"]
             },
             {
                 "$": {
@@ -829,9 +878,7 @@
                         }
                     }
                 ],
-                "Description": [
-                    "Sets the margin around the widget. For further information, please check its type"
-                ]
+                "Description": ["Sets the margin around the widget. For further information, please check its type"]
             },
             {
                 "$": {
@@ -847,9 +894,7 @@
                         }
                     }
                 ],
-                "Description": [
-                    "Sets the shadow effect of the widget. For further information, please check its type"
-                ]
+                "Description": ["Sets the shadow effect of the widget. For further information, please check its type"]
             },
             {
                 "$": {
@@ -898,9 +943,7 @@
                     "type": "String",
                     "category": "Layout"
                 },
-                "Description": [
-                    "outer height and width of widget"
-                ]
+                "Description": ["outer height and width of widget"]
             },
             {
                 "$": {
@@ -908,9 +951,7 @@
                     "type": "String",
                     "category": "Layout"
                 },
-                "Description": [
-                    "top and left of widget"
-                ]
+                "Description": ["top and left of widget"]
             }
         ]
     }
