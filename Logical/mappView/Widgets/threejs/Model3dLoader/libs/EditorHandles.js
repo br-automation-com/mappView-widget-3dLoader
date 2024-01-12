@@ -23,6 +23,14 @@ define([
                 },
                 update: function (newBox) {
                     self.boxSize = newBox;
+                    self.widget.el.css('top', parseInt(newBox.top, 10))
+                        .css('left', parseInt(newBox.left, 10))
+                        .css('width', parseInt(newBox.width, 10))
+                        .css('height', parseInt(newBox.height, 10));
+                    self.widget._setWidth(newBox.width);
+                    self.widget._setHeight(newBox.height);
+                    self.widget.onWindowResize();
+                    self.widget.render();
                 },
                 finish: function () {
                     return self.boxSize;
